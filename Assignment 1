@@ -1,0 +1,165 @@
+#Q1------------------------
+# Creating a dictionary with student information
+
+my_dict = {
+    "name": "Rahul",
+    "rollno": 34,
+    "course": "BCA",
+    "age": 20,
+    "city": "Delhi"
+}
+
+print("Student information:")
+print(my_dict)
+
+# Adding new student information
+my_dict["marks"] = 85
+my_dict["college"] = "ABC College"
+
+print("\nAfter adding information:")
+print(my_dict)
+
+# Deleting student information
+del my_dict["city"]
+
+print("\nAfter deleting city information:")
+print(my_dict)
+
+# Displaying individual student information
+print("\nStudent Name:", my_dict["name"])
+print("Roll Number:", my_dict["rollno"])
+print("Marks:", my_dict["marks"])
+
+#Q2------------------------
+# Two lists
+list1 = ['name', 'panel', 'rollno']
+list2 = ['ABC', 'B', 34]
+
+# Converting lists into dictionary
+my_dict = dict(zip(list1, list2))
+
+print("Dictionary:")
+print(my_dict)
+
+
+Got you 😭 — all together in ONE block, no separate sections, ready to put into one Jupyter notebook.
+
+# 1. Assign 5 elements in the dictionary named my_dict.
+# This dictionary contains student's information. Add and delete student information.
+
+my_dict = {
+    "name": "ABC",
+    "rollno": 34,
+    "course": "BCA",
+    "age": 20,
+    "city": "Pune"
+}
+
+print(my_dict)
+
+my_dict["marks"] = 85
+print(my_dict)
+
+del my_dict["city"]
+print(my_dict)
+
+
+# 2. Convert list to dictionary
+
+list1 = ['name', 'panel', 'rollno']
+list2 = ['ABC', 'B', 34]
+
+my_dict = dict(zip(list1, list2))
+
+print(my_dict)
+
+
+# 3. Sort the elements of the dictionary using sorted() function
+
+my_dict = {'name':'ABC', 'panel':'B', 'rollno':34, 'marks':[65,87,67,94]}
+
+print(sorted(my_dict))
+
+
+# 4. Convert a dictionary to lists.
+# Make one list of keys and other of values.
+
+my_dict = {'name':'ABC', 'panel':'B', 'rollno':34, 'marks':[65,87,67,94]}
+
+keys = list(my_dict.keys())
+values = list(my_dict.values())
+
+print("Keys:", keys)
+print("Values:", values)
+
+
+# 5. Find the mean of values of dictionary
+
+my_dict = {'marks1':23, 'marks2':123, 'marks3':43, 'marks4':13, 'marks5':39}
+
+values = my_dict.values()
+
+mean = sum(values) / len(values)
+
+print("Mean =", mean)
+
+
+# 6. Perform following operations on above dictionary
+# a) Display name as Dev
+# b) Display 12 roll no
+# c) Display greatest marks
+
+my_dict = {
+    'name':['Yash','Neel','Dev'],
+    'rollno':[11,12,13],
+    'marks':[78,56,98]
+}
+
+print("Name:", my_dict['name'][2])
+print("Roll no:", my_dict['rollno'][1])
+print("Greatest marks:", max(my_dict['marks']))
+
+
+# 7. Calculate frequency of letters occurring in a given string
+
+text = input("Enter a string: ")
+
+freq = {}
+
+for ch in text:
+    if ch in freq:
+        freq[ch] = freq[ch] + 1
+    else:
+        freq[ch] = 1
+
+print(freq)
+
+
+# 8. Write a program which takes numerator and denominator values from the user
+# and gives output as a tuple of Quotient and Remainder
+
+num = int(input("Enter numerator: "))
+den = int(input("Enter denominator: "))
+
+quotient = num // den
+remainder = num % den
+
+result = (quotient, remainder)
+
+print(result)
+
+
+# 9. Suppose a date is represented as a tuple (d,m,y).
+# Create two date tuples and find the number of days between two dates.
+
+from datetime import date
+
+d1 = tuple(map(int, input("Enter first date (d m y): ").split()))
+d2 = tuple(map(int, input("Enter second date (d m y): ").split()))
+
+date1 = date(d1[2], d1[1], d1[0])
+date2 = date(d2[2], d2[1], d2[0])
+
+days = abs((date2 - date1).days)
+
+print("Number of days:", days)

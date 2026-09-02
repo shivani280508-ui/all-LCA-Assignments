@@ -1,0 +1,32 @@
+def check_triangle(a, b, c):
+    # Find the largest side
+    if a >= b and a >= c:
+        largest = a
+        side1 = b
+        side2 = c
+    elif b >= a and b >= c:
+        largest = b
+        side1 = a
+        side2 = c
+    else:
+        largest = c
+        side1 = a
+        side2 = b
+
+    # Check Pythagoras theorem
+    if largest ** 2 == side1 ** 2 + side2 ** 2:
+        return True
+    else:
+        return False
+
+
+# Taking input from the user
+a = float(input("Enter first side: "))
+b = float(input("Enter second side: "))
+c = float(input("Enter third side: "))
+
+# Calling the function
+if check_triangle(a, b, c):
+    print("The triangle is a right-angled triangle.")
+else:
+    print("The triangle is not a right-angled triangle.")
